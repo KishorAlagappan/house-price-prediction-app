@@ -2,80 +2,152 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    .form-container {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: 700;
-    }
-    
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    button[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    
-    button[type="submit"]:hover {
-      background-color: #3e8e41;
-    }
-    
-    .prediction-text {
-      margin-top: 40px;
-      font-size: 16px;
-      text-align: center;
-    }
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction - Boston</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f2f2f2;
+      }
+      
+      h1 {
+        text-align: center;
+        font-weight: 1000;
+        margin-top: 50px;
+        font-size: 70px;
+        color: #0a68b4;
+        text-shadow: 2px 2px #00000026;
+      }
+
+      .form-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #00000026;
+        padding: 40px;
+        width: 500px;
+        margin: auto;
+        margin-top: 50px;
+
+      }
+      
+      .form-group {
+        margin: auto;
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 30px;
+      }
+
+      
+      label {
+        font-weight: 600;
+        text-align: center;
+      }
+      
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+        margin-bottom: 25px;
+        font-size: 14px;
+        display: block;
+        margin: auto;
+      }
+      
+      button[type="submit"] {
+        width: 100%;
+        background-color: #0a68b4;
+        color: #ffffff;
+        padding: 40px;
+        border-radius: 5px;
+        border: none;
+        font-size: 40px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 25px;
+        box-shadow: 0px 0px 10px #3f51b5;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #0f5d8e;
+        box-shadow: 0px 0px 10px #303f9f;
+      }
+      
+      .result {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  
 
 <body>
-  <div class="container">
-    <div class="form-container">
-      <h1>House Price Prediction</h1>
-      <form action="{{ url_for('predict')}}" method="post">
-        <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
-        <input type="text" name="ZN" placeholder="ZN" required="required" /><br>
-        <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
-        <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
-        <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
-        <input type="text" name="RM" placeholder="RM" required="required" /><br>
-        <input type="text" name="Age" placeholder="Age" required="required" /><br
+    <div class="Login">
+        <h1>House Price Prediction - Boston</h1>
+        <div class="form-container">
+            <form action="{{ url_for('predict')}}"method="post">
+                <div class="form-group">
+                    <label for="CRIM">CRIM:</label>
+                    <input type="text" id="CRIM" name="CRIM" required>
+                </div>
+                <div class="form-group">
+                    <label for="ZN">ZN:</label>
+                    <input type="text" id="ZN" name="ZN" required>
+                </div>
+                <div class="form-group">
+                    <label for="INDUS">INDUS:</label>
+                    <input type="text" id="INDUS" name="INDUS" required>
+                </div>
+                <div class="form-group">
+                    <label for="CHAS">CHAS:</label>
+                    <input type="text" id="CHAS" name="CHAS" required>
+                </div>
+                <div class="form-group">
+                    <label for="NOX">NOX:</label>
+                    <input type="text" id="NOX" name="NOX" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="RM">RM:</label>
+                    <input type="text" id="RM" name="RM" required>
+                </div>
+                <div class="form-group">
+                    <label for="Age">Age:</label>
+                    <input type="text" id="Age" name="Age" required>
+                </div>
+                <div class="form-group">
+                    <label for="DIS">DIS:</label>
+                    <input type="text" id="DIS" name="DIS" required>
+                </div>
+                <div class="form-group">
+                    <label for="RAD">RAD:</label>
+                    <input type="text" id="RAD" name="RAD" required>
+                </div>
+                <div class="form-group">
+                    <label for="TAX">TAX:</label>
+                    <input type="text" id="TAX" name="TAX" required>
+                </div>
+                <div class="form-group">
+                    <label for="PTRATIO">PTRATIO:</label>
+                    <input type="text" id="PTRATIO" name="PTRATIO" required>
+                </div>
+                <div class="form-group">
+                    <label for="B">B:</label>
+                    <input type="text" id="B" name="B" required>
+                </div>
+                <div class="form-group">
+                    <label for="LSTAT">LSTAT:</label>
+                    <input type="text" id="LSTAT" name="LSTAT" required>
+                </div>
+            
+        
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        </div>    
+    </div>
+    {{prediction_text}}
+</body>
+</html>  
