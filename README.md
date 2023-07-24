@@ -4,4 +4,4 @@
 1. [Github Account](https://github.com/)
 2. [Git](https://git-scm.com/)
 3. [VS Code IDE](https://code.visualstudio.com/)
-4. .[Docker]
+
