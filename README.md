@@ -6,7 +6,6 @@ This machine learning project focuses on predicting house prices using the Bosto
 ## Table of Contents
 - [Project Description](#project-description)
 - [Dataset](#dataset)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Results](#results)
 - [Contributing](#contributing)
@@ -17,10 +16,7 @@ The project involves building a regression model to predict house prices using t
 ## Dataset
 The Boston Housing dataset contains 506 instances with 13 features each. The dataset is divided into training and testing sets. Features include attributes like per capita crime rate, average number of rooms per dwelling, and others that influence house prices. The dataset is loaded using scikit-learn's `load_boston` function.
 
-## Installation
-1. Clone the repository: `git clone https://KishorAlagappan/House_Price_Prediction_App`
-2. Navigate to the project folder: `cd House_Price_Prediction_App`
-3. Install required dependencies: `pip install -r requirements.txt`
+
 
 ## Usage
 1. Explore the Jupyter Notebook `Boston_House_price_prediction_ML_model.ipynb` to see the step-by-step process.
