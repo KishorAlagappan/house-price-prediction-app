@@ -3,6 +3,7 @@
 ## Overview
 This machine learning project focuses on predicting house prices using the Boston Housing dataset. The goal is to develop a model that accurately estimates the prices of houses based on various features. The project involves data preprocessing, exploratory data analysis, feature engineering, model selection, hyperparameter tuning, and evaluation.
 
+
 ## Table of Contents
 - [Project Description](#project-description)
 - [Dataset](#dataset)
@@ -14,7 +15,7 @@ This machine learning project focuses on predicting house prices using the Bosto
 The project involves building a regression model to predict house prices using the Boston Housing dataset. It explores features like crime rate, average number of rooms, accessibility to highways, and more to create an accurate prediction model. The codebase includes data preprocessing steps, visualization of data distributions, and training/testing the model.
 
 ## Dataset
-The Boston Housing dataset contains 506 instances with 13 features each. The dataset is divided into training and testing sets. Features include attributes like per capita crime rate, average number of rooms per dwelling, and others that influence house prices. The dataset is loaded using scikit-learn's `load_boston` function.
+The Boston Housing dataset contains 506 instances with 13 features each. The dataset is divided into training and testing sets. Features include attributes like per capita crime rate, the average number of rooms per dwelling, and others that influence house prices. The dataset is loaded using scikit-learn's `load_boston` function.
 
 
 
